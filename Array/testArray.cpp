@@ -9,6 +9,6 @@ int main()
     for (int loop = 0; loop < n; loop++)
     {
         cout << arr[loop] << " ";
-    }
+    } 
     return 0;
 }
