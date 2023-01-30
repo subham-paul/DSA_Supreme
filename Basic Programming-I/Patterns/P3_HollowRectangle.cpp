@@ -3,29 +3,32 @@ using namespace std;
 int main()
 {
     // Hollow Rectangle
-
     int rowCount, colCount;
-    cout << "Enter rowCount and colCount here-> ";
+    cout << "Enter RowCount and ColCount here-> ";
     cin >> rowCount >> colCount;
+
     for (int row = 0; row < rowCount; row++)
     {
+        // first row or last row -> print 5 *
         if (row == 0 || row == rowCount - 1)
         {
             for (int col = 0; col < colCount; col++)
             {
-                cout << "*";
+                cout << "* ";
             }
-        }
-        else{
+        } else {
+            // remainging middle rows
+            // first star
             cout << "* ";
-            for (int i = 0; i < 3; i++)
+            // spaces
+            for (int i = 0; i < colCount - 2; i++)
             {
-                cout << " ";
+                cout << "  ";
             }
-            cout << "*";
+            // last column star
+            cout << "* ";
         }
         cout << endl;
     }
-
     return 0;
 }
