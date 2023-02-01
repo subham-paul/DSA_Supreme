@@ -7,9 +7,9 @@ int main()
     cout << "Enter number of rows: ";
     cin >> rows;
 
-    for (int i = 1, k = 0; i <= rows; ++i, k = 0)
+    for (int i = 1, k = 0; i <= rows; i++, k = 0)
     {
-        for (int space = 1; space <= rows - i; ++space)
+        for (int space = 1; space <= rows - i; space++)
         {
             cout << "  ";
         }
@@ -17,7 +17,7 @@ int main()
         while (k != 2 * i - 1)
         {
             cout << "* ";
-            ++k;
+            k++;
         }
         cout << endl;
     }
