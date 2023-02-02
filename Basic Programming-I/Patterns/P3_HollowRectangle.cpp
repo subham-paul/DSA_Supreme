@@ -9,7 +9,7 @@ int main()
 
     for (int row = 0; row < rowCount; row++)
     {
-        // first row or last row -> print 5 *
+        // first row or last row -> print all *
         if (row == 0 || row == rowCount - 1)
         {
             for (int col = 0; col < colCount; col++)
