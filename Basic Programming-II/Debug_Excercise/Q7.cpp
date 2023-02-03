@@ -14,12 +14,16 @@ int main()
     {
     case '+':
         cout << num1 << " + " << num2 << " = " << num1 + num2;
+        break;
     case '-':
         cout << num1 << " - " << num2 << " = " << num1 - num2;
-    case '/':
-        cout << num1 << " * " << num2 << " = " << num1 * num2;
+        break;
     case '*':
+        cout << num1 << " * " << num2 << " = " << num1 * num2;
+        break;
+    case '/':
         cout << num1 << " / " << num2 << " = " << num1 / num2;
+        break;
     default:
         // operator is doesn't match any case constant (+, -, *, /)
         cout << "Error! The operator is not correct";
