@@ -11,10 +11,10 @@ int main()
         // print spaces
         for (int j = 0; j < i; j++)
         {
-            cout << "  ";
+            cout << " ";
         }
         // print stars
-        for (int k = 0; k < (2 * (size - 1)); k++)
+        for (int k = 0; k < 2 * (size - i) - 1; k++)
         {
             cout << "*";
         }
