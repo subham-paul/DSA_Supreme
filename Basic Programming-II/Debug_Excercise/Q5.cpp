@@ -15,7 +15,7 @@ int main()
             cout << " ";
         }
         // print first stars
-        for (int j = 0; j < i + 1; j++)
+        for (int j = 1; j < i + 1; j++)
         {
             cout << "*";
         }
@@ -33,7 +33,7 @@ int main()
     }
     // lower part
     // inverted pyramid
-    for (int i = size; i > 0; i++)
+    for (int i = size; i > 0; i--)
     {
         for (int j = 0; j < size - i; j++)
         {
