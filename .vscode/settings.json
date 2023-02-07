@@ -3,5 +3,6 @@
         "*.ejs": "html",
         "*.html": "html",
         "iostream": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
