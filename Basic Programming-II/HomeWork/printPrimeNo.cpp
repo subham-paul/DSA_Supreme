@@ -1,23 +1,32 @@
-#include <iostream>
-#include<cmath>
+#include<iostream>
 using namespace std;
-void printPrime(int x) {
-    for (int i = 2; i <= x; ++i) {// loop to check for each number in the range
-        int ctr = 0; // to maintain factor count 
-        for (int j = 2; j <= sqrt(i); ++j) {// checking for factors
-            if (i % j == 0) {
-                ctr = 1; // increasing factor count when found
-            }
-        } if (ctr == 0) // checking and printing prime numbers
-        {
-            cout << i << ", ";
+bool check_prime(int n) {
+    bool is_prime = true;
+    if (n == 0 || n == 1) {
+        is_prime = false;
+    }
+    for (int i = 2; i <= n / 2; ++i) {
+        if (n % i == 0) {
+            is_prime = false;
+            break;
         }
     }
+    return is_prime;
 }
-int main() {
+void printPrime(int n){
+    for (int i = 1; i <= n; i++)
+    {
+        if (check_prime(i)==true)
+        {
+            /* code */
+        }
+        
+    }
+    
+}
+int main(){
     int n;
-    cout << "Enter a Number -> ";
-    cin >> n;
-    printPrime(n);
+    cout<<"Enter a number -> ";
+    cin>>n;
     return 0;
 }
