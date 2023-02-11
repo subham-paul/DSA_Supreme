@@ -3,8 +3,15 @@ using namespace std;
 int main()
 {
     // Hollow Rectangle
+/*      
+    Enter RowCount and ColCount here : 4 3
+    * * * 
+    *   * 
+    *   * 
+    * * *
+ */
     int rowCount, colCount;
-    cout << "Enter RowCount and ColCount here-> ";
+    cout << "Enter RowCount and ColCount here : ";
     cin >> rowCount >> colCount;
 
     for (int row = 0; row < rowCount; row++)

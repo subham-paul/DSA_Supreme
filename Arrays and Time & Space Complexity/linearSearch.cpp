@@ -18,11 +18,11 @@ int main()
     int key = 5;
     if (linearSearch(arr, size, key))
     {
-        cout << "Found value";
+        cout << "Found value"<<endl;
     }
     else
     {
-        cout << "Not Found Value";
+        cout << "Not Found Value"<<endl;
     }
     return 0;
 }
