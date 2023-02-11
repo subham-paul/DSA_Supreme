@@ -4,7 +4,7 @@ int main()
 {
     // Hollow Rectangle
     int rowCount, colCount;
-    cout << "Enter RowCount and ColCount here->> ";
+    cout << "Enter RowCount and ColCount here ->> ";
     cin >> rowCount >> colCount;
 
     for (int row = 0; row < rowCount; row++)
