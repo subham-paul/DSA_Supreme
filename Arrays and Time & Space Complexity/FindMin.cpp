@@ -13,6 +13,6 @@ int main()
             minI = arr[i];
         }
     }
-    cout << minI << " this is a minimum number." << endl;
+    cout <<"This "<< minI << " this is a minimum number of this array." << endl;
     return 0;
 }

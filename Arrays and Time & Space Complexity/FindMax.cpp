@@ -13,6 +13,6 @@ int main()
             maxI = arr[i];
         }
     }
-    cout << maxI << " is the maximum number" << endl;
+    cout <<"This "<< maxI << " is the maximum number" << endl;
     return 0;
 }

@@ -7,14 +7,12 @@ int findUnique(vector<int> arr) {
 	for(int i=0; i<arr.size(); i++) {
 		ans = ans ^ arr[i];
 	}
-
 	return ans;
 }
 int main(){
     int n;
-	cout << "Enter the size of array " << endl;
+	cout << "Enter the size of array -> ";
 	cin >> n;
-
 
 	vector<int> arr(n);
 	cout << "Enter the elements " << endl;
