@@ -1,19 +1,24 @@
 #include <iostream>
+#include<limits.h>
 using namespace std;
-void reverseInt(int n) {
-    int reversed_number = 0, remainder;
-    while (n != 0) {
-        remainder = n % 10;
-        reversed_number = reversed_number * 10 + remainder;
-        n /= 10;
+
+int reverse(int x) {
+        int ans = 0;
+        while(x!=0){
+            int digit = x %10;
+            if( (ans>INT_MAX/10) || (ans< INT_MIN/10)){
+                return 0;
+            }
+            ans=(ans*10)+digit;
+            x=x/10;
+        }
+        return ans;
     }
-    cout << "Reversed Number = " << reversed_number;
-}
 
 int main() {
     int n;
     cout << "Enter a Number -> ";
     cin >> n;
-    reverseInt(n);
+    cout<<"REVERSE INTEGER IS -> "<<reverse(n)<<endl;
     return 0;
 }
