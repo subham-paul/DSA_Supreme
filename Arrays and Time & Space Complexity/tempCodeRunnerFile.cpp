@@ -1,1 +1,1 @@
-uniqueElement
+printArray
