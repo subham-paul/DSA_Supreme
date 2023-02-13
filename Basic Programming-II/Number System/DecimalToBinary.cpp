@@ -3,32 +3,32 @@
 using namespace std;
 int decimalToBinary1(int n){
     // Division method
-    int bNo = 0;
+    int binaryNo = 0;
     int i = 0;
     while (n>0)
     {
         int bit = n%2;
-        bNo = bit*pow(10,i++)+bNo;
+        binaryNo = bit*pow(10,i++)+binaryNo;
         n=n/2;
     }
-    return bNo;
+    return binaryNo;
 }
 
 int decimalToBinary2(int n){
-    // Bitwise method
-    int bNo = 0;
+    // Bitwise method - always use this because computer use binary number
+    int binaryNo = 0;
     int i = 0;
     while (n>0)
     {
         int bit = (n & 1);
-        bNo = bit*pow(10,i++)+bNo;
+        binaryNo = bit*pow(10,i++)+binaryNo;
         n = n>>1;
     }
-    return bNo;
+    return binaryNo;
 }
 int main() {
     int n;
-    cout<<"Enter Decimal Number ->";
+    cout<<"Enter Decimal Number -> "; // like 25
     cin>>n;
     // cout<<decimalToBinary1(n)<<endl;
     cout<<decimalToBinary2(n)<<endl;
