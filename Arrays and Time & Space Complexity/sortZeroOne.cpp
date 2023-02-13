@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-// Find Sum of 3 elements of this array
+// Sort Zero and One elements of this array
 using namespace std;
 void printArray(vector<int> arr) {
 	for (auto i : arr)
