@@ -4,7 +4,7 @@
 using namespace std;
 int main() {
     vector<int> arr{10, 20, 40, 60, 70};
-    int sum = 80;
+    int sum = 50;
 
     // print all pairs
     // outer loop will traverse for each element
