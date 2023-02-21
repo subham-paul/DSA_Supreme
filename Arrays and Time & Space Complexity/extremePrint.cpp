@@ -3,15 +3,19 @@
 
 #include <iostream>
 using namespace std;
-int main() {
+int main(){
     int arr[8] = {10, 20, 30, 40, 50, 60, 70, 80};
     int size = 8;
     int start = 0;
     int end = size - 1;
-
-    cout<<"Extreme Array is -> ";
-    while (start <= end) {
-        if (start == end) {
+    cout << "Input array is -> ";
+    for (auto val : arr){
+        cout << val << " ";
+    }
+    cout << endl;
+    cout << "Extreme Array is -> ";
+    while (start <= end){
+        if (start == end){
             cout << arr[start] << " ";
         } else {
             cout << arr[start] << " ";
@@ -20,6 +24,6 @@ int main() {
         start++;
         end--;
     }
-    cout<<endl;
+    cout << endl;
     return 0;
 }
