@@ -12,7 +12,7 @@ int findSqrt(int n) {
     if(mid*mid == target) {
       return mid;
     }
-     
+
 
     if(mid*mid > target) {
       //left search
