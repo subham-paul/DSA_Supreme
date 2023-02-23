@@ -36,6 +36,6 @@ int main() {
 
   int ans = lastOcc(v, target);
   cout << "Last occurence is at " << ans << endl;
- 
+
   return 0;
 }
