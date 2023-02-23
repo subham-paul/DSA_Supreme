@@ -6,27 +6,22 @@ using namespace std;
 int binarySearch(int arr[], int size, int target) {
   int start = 0;
   int end = size - 1;
-
   int mid = start + (end - start ) / 2;
 
   while(start <= end) {
     int element = arr[mid];
-
     if(element == target) {//element found, then return index
       return mid;
     }
-    
     if(target < element) {
       //search in left
       end = mid - 1;
-    }
-    else {
+    } else {
       //search in right
       start = mid + 1;
     }
 
     mid = start + (end - start ) / 2;
-
   }
 
   //element not found
@@ -54,11 +49,9 @@ int main() {
 
   if(binary_search(arr, arr + size, 7)) {
     cout << "Found" << endl;
-  }
-  else {
+  } else {
     cout << "Not found. " << endl;
   }
-
 
   return 0;
 }
