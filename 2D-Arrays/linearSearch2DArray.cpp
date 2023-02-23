@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     int arr[5][4] = {
         {10, 12, 13, 14},
         {15, 16, 17, 18},
@@ -38,12 +37,9 @@ int main()
         }
     }
 
-    if (flag == 1)
-    {
+    if (flag == 1) {
         cout << "\nElement found.";
-    }
-    else
-    {
+    } else {
         cout << "\nElement not found.";
     }
 

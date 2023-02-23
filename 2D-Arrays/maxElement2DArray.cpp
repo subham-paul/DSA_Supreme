@@ -1,8 +1,8 @@
 #include <iostream>
+#include <limits.h>
 using namespace std;
 
-int main()
-{
+int main() {
     int arr[5][4] = {
         {8, 12, 13, 14},
         {15, 16, 17, 18},
@@ -46,8 +46,8 @@ int main()
             }
         }
     }
-
-    cout << "\nMinimum element in array is: " << min << endl;
-    cout << "\nMaximum element in array is: " << max << endl;
+    cout<<endl;
+    cout << "Minimum element in array is: " << min << endl;
+    cout << "Maximum element in array is: " << max << endl;
     return 0;
 }

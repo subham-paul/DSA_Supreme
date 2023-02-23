@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     int arr[5][4] = {
         {1, 2, 3, 4},  // Sum = 10
         {2, 3, 4, 11}, // Sum = 20
@@ -11,14 +10,13 @@ int main()
         {1, 9, 9, 7}   // Sum = 26
     };
 
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         int sum = 0;
-        for (int j = 0; j < 4; j++)
-        {
+
+        for (int j = 0; j < 4; j++) {
             sum = sum + arr[i][j];
         }
-        cout << "\nRow " << i << " sum is: " << sum;
+        cout << "Row " << i << " sum is: " << sum;
         cout << endl;
     }
     return 0;

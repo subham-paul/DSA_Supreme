@@ -17,7 +17,7 @@ int main()
         {
             sum = sum + arr[j][i];
         }
-        cout << "\nColumn " << i << " sum is: " << sum;
+        cout << "Column " << i << " sum is: " << sum;
         cout << endl;
     }
     return 0;
