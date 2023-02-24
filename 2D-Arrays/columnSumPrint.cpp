@@ -1,24 +1,19 @@
 #include <iostream>
 using namespace std;
-
-int main()
-{
-    int arr[5][4] = {
-        {1, 2, 3, 4},
-        {2, 3, 4, 11},
-        {5, 6, 1, 3},
-        {2, 4, 6, 8},
-        {1, 9, 9, 7}};
-    int i, j;
-    for (i = 0; i < 4; i++)
+int main() {
+    int arr[3][3] = {
+        {1, 2, 3},  // 6
+        {4, 5, 6},  // 15
+        {7, 8, 9}}; // 24
+    // 12 15 18
+    for (int col = 0; col < 3; col++)
     {
         int sum = 0;
-        for (j = 0; j < 5; j++)
+        for (int row = 0; row < 3; row++)
         {
-            sum = sum + arr[j][i];
+            sum += arr[row][col];
         }
-        cout << "Column " << i << " sum is: " << sum;
-        cout << endl;
+        cout << col << " th Col sum is " << sum << endl;
     }
     return 0;
 }

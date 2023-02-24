@@ -1,23 +1,20 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-    int arr[5][4] = {
-        {1, 2, 3, 4},  // Sum = 10
-        {2, 3, 4, 11}, // Sum = 20
-        {5, 6, 1, 3},  // Sum = 15
-        {2, 4, 6, 8},  // Sum = 20
-        {1, 9, 9, 7}   // Sum = 26
-    };
-
-    for (int i = 0; i < 5; i++) {
+int main()
+{
+    int arr[3][3] = {
+        {1, 2, 3},  // 6
+        {4, 5, 6},  // 15
+        {7, 8, 9}}; // 24
+    for (int row = 0; row < 3; row++)
+    {
         int sum = 0;
-
-        for (int j = 0; j < 4; j++) {
-            sum = sum + arr[i][j];
+        for (int col = 0; col < 3; col++)
+        {
+            sum += arr[row][col];
         }
-        cout << "Row " << i << " sum is: " << sum;
-        cout << endl;
+        cout << row << " th Row sum is " << sum << endl;
     }
+
     return 0;
 }
