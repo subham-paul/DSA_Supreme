@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 int main(){
-    vector<int> arr{5, 4, 3, 2, 1};
+    vector<int> arr{5, 4, 3, 2, 1, -5, -2}; // worst case Time Complexity- O(n^2),  Space Complexity- O(1)
     int n = arr.size();
     // selection sort
     // outer loop -> (n-1) rounds
@@ -27,8 +27,9 @@ int main(){
     // {
     //     cout << arr[i] << " ";
     // }
-    for(auto val : arr){
-        cout<<val<<", ";
+    for (auto val : arr)
+    {
+        cout << val << ", ";
     }
     cout << endl;
 
