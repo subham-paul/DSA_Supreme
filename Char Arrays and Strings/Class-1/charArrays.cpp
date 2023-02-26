@@ -102,21 +102,22 @@ int main()
         // cin.getline(arr, 50);
         // cout << arr<<endl;
 
-        char name[100];
-        cin >> name;
-        cout << "length is: " << getLength(name) << endl; // is a custom function
-        cout << "Length is -> " << strlen(name) << endl; // this a pre defined function for 
-        cout << "Initially: " << name << endl;
-        reverseCharArray(name);
-        cout << "After reversal process: " << name << endl;
+        // char name[100];
+        // cout<<"Enter name ";
+        // cin >> name;
+        // cout << "length is: " << getLength(name) << endl; // is a custom function
+        // cout << "Length is -> " << strlen(name) << endl; // this a pre defined function for find length
+        // cout << "Initially: " << name << endl;
+        // reverseCharArray(name);
+        // cout << "After reversal process: " << name << endl;
 
         // char sentence[100];
         // cin.getline(sentence, 100);
         // replaceSpaces(sentence);
         // cout << "printing sentence with @ char" << endl << sentence << endl;
 
-        // char arra[100] = "hahahahha";
-        // cout << "plindrome check: " << checkPalindrome(arr);
+        char arr[100] = "abba";
+        cout << "plindrome check: " << checkPalindrome(arr);
 
         // char arr[100] = "subham";
         // convertIntoUpperCase(arr);
