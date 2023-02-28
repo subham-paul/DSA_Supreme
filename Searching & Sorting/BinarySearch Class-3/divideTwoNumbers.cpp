@@ -5,33 +5,34 @@ int solve(int dividend, int divisor) {
   int s = 0;
   int e = abs(dividend);
   int ans = 0;
-  int mid = s + (e-s)/2;
-  while(s <= e) {
-    //perfect solution
-    if( abs(mid*divisor) == abs(dividend)) {
+  int mid = s + (e - s) / 2;
+  while (s <= e) {
+    // perfect solution
+    if (abs(mid * divisor) == abs(dividend))
+    {
       ans = mid;
       break;
     }
-    //not perfect sol
-    if(abs(mid*divisor) > abs(dividend)) {
-      //left
+    // not perfect sol
+    if (abs(mid * divisor) > abs(dividend))
+    {
+      // left
       e = mid - 1;
-    } 
-    else {
-      //ans store
+    } else {
+      // ans store
       ans = mid;
-      //right search
+      // right search
       s = mid + 1;
     }
-    mid = s + (e-s)/2;
+    mid = s + (e - s) / 2;
   }
 
-  if((divisor<0 && dividend<0) || (divisor>0 && dividend>0))
+  if ((divisor < 0 && dividend < 0) || (divisor > 0 && dividend > 0))
     return ans;
-  else {
+  else
+  {
     return -ans;
   }
-
 }
 
 int main() {
