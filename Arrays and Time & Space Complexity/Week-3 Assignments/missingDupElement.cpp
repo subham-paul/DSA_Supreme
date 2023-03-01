@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+// Here we need to missing element of the array like 
+// input arr[] = {1, 2, 2, 5, 4}; Output is 3 because 3 missing of this array
 void findMissingDuplicate(int arr[], int size)
 {
     int i = 0;
