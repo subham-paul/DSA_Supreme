@@ -1,3 +1,5 @@
+// Code from LC. 33. Search in Rotated Sorted Array
+
 class Solution {
 public:
 int findPivot(vector<int> arr) {
@@ -39,8 +41,6 @@ int binarySearch(vector<int> arr, int s, int e, int target) {
         mid = s +(e-s)/2;
     }
     return -1;
-
-
 }
     int search(vector<int>& nums, int target) {
 
@@ -55,17 +55,5 @@ int binarySearch(vector<int> arr, int s, int e, int target) {
         }
 
     return ans;
-
-
-
-
-
-
-
-
-
-
-
-        
     }
 };

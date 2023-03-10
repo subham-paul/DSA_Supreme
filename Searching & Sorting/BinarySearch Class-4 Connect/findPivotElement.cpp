@@ -30,13 +30,13 @@ int findPivot(vector<int> arr) {
 
 
 int main() {
-  vector<int> arr{1,3};
+  vector<int> arr{5,3};
   int ans = findPivot(arr);
   if(ans == -1) {
-    cout << "Kuch gadbad hai " << endl;
+    cout << "Answer Not Found" << endl;
   }
   else {
-    cout << "Ans is at index" << ans << endl;
+    cout << "Ans is at index -> " << ans << endl;
     cout << "value of ans is " << arr[ans] << endl;
   }
 
