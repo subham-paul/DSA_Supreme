@@ -1,1 +1,1 @@
-factorial
+cout<<n<<" ";

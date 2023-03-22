@@ -11,7 +11,7 @@ void printCounting(int n) {
 	cout << n << " ";
 	
 
-	//re4ciursive relation
+	//recursive relation
 	printCounting(n-1);	
 }
 
