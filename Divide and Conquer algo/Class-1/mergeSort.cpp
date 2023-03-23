@@ -78,9 +78,11 @@ int main() {
     int e = n - 1;
 
     mergeSort(arr, s, e);
+
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
     cout << endl;
+
     return 0;
 }
