@@ -8,8 +8,8 @@ void mergeTwoArray(int *arr, int s, int e) {
     int len2 = e - mid;
 
     // assume to create arrays for len1 and len2 length
-    int *left = new int[len1]; // new Address return, address store by pointer
-    int *right = new int[len2];
+    int* left = new int[len1]; // new Address return, address store by pointer
+    int* right = new int[len2];
 
     // copy values
     int k = s;
@@ -24,10 +24,10 @@ void mergeTwoArray(int *arr, int s, int e) {
         k++;
     }
 
-    // merge logic
+    // merge two sorted array logic
     int leftIndex = 0;
     int rightIndex = 0;
-    int mainArrayIndex = 5;
+    int mainArrayIndex = s;
 
     while (leftIndex < len1 && rightIndex < len2) {
 
@@ -51,7 +51,7 @@ void mergeTwoArray(int *arr, int s, int e) {
     // TODO: delete left and right newly created array
 }
 
-void mergeSort(int arr[], int s, int e) {
+void mergeSort(int* arr, int s, int e) {
     // Base Case
     // s == e -> Single element
     // s>e -> invalid array
@@ -71,9 +71,9 @@ void mergeSort(int arr[], int s, int e) {
 }
 
 int main() {
-    int arr[] = {7, 3, 2, 16, 24, 4, 11, 9};
-    // int n = sizeof(arr) / sizeof(arr[0]);
-    int n = 8;
+    int arr[] = {7, 3, 2, 16, 24, 4, 2, 11, 9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    // int n = 8;
     int s = 0;
     int e = n - 1;
 
