@@ -30,14 +30,6 @@ void solveMaze(int arr[3][3], int row, int col, int i, int j, vector<vector<bool
         // backtrack
         visited[i + 1][j] = false;
     }
-    // down -> (i+1,j)
-    if (isSafe(i + 1, j, row, col, arr, visited))
-    {
-        visited[i + 1][j] = true;
-        solveMaze(arr, row, col, i + 1, j, visited, path, output + 'D');
-        // backtrack
-        visited[i + 1][j] = false;
-    }
     // left -> (i,j-1)
     if (isSafe(i, j - 1, row, col, arr, visited))
     {
