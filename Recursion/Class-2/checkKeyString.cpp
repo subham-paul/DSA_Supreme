@@ -2,17 +2,14 @@
 #include <vector>
 using namespace std;
 
-void checkKey(string &str, int i, int &n, char &key, int &count)
-{
+void checkKey(string &str, int i, int &n, char &key, int &count) {
         // base case
-        if (i >= n)
-        {
+        if (i >= n) {
                 // key not found
                 return;
         }
         // 1 case solve krdo
-        if (str[i] == key)
-        {
+        if (str[i] == key) {
                 /// store in vector
                 // ans.push_back(i);
                 count++;
@@ -22,13 +19,10 @@ void checkKey(string &str, int i, int &n, char &key, int &count)
         checkKey(str, i + 1, n, key, count);
 }
 
-int main()
-{
+int main() {
         string str = "lovebabbar";
         int n = str.length();
-
-        char key = 'b';
-
+        char key = 'a';
         int i = 0;
         // vector<int> ans;
         int count = 0;
