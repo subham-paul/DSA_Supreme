@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 void lastOccrLTR(string &s, char key, int i, int &ans) {
@@ -27,6 +28,19 @@ void lastOccrRTL(string &s, char key, int i, int &ans) {
     // RE
     lastOccrRTL(s, key, i - 1, ans);
 }
+
+/* void lastOccrSTRCHR(string &s, char key, int i, int &ans) {
+    // base case
+    if (i >= s.size()) {
+        return;
+    }
+    // Ek case ka solution
+    if (strchr(s, key)) {
+        ans = i;
+    }
+    // RE
+    lastOccrSTRCHR(s, key, i + 1, ans);
+} */
 int main() {
     string str = "abcddedg";
     char key = 'd';
@@ -36,7 +50,11 @@ int main() {
 
     lastOccrLTR(str, key, 0, ans); // used for Left to Right function
     cout << "Left to Right find ans -> " << ans << endl;
+
     lastOccrRTL(str, key, str.size() - 1, ans); // used for Right to Left function
     cout << "Right to Left find ans -> " << ans << endl;
+
+    /* lastOccrSTRCHR(str, key, 0, ans); // used for STRCHR function
+    cout << "STRCHR function ans -> " << ans << endl; */
     return 0;
 }
