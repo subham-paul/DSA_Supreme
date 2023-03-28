@@ -7,7 +7,8 @@
         "random": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "xstring": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
