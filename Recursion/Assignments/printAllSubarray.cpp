@@ -27,6 +27,9 @@ void printSubArray(vector<int> &nums) {
 }
 
 int main() {
+
+    // T.C-> O(N*N),  S.C-> O(N)
+
     vector<int> nums{1, 2, 3, 4, 5};
     printSubArray(nums);
 
