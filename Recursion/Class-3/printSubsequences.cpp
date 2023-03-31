@@ -10,10 +10,10 @@ void printSubsequences(string str, int n, string output, int i, vector<string> &
     return;
   }
 
-  // include
+  // include call inside output string
   printSubsequences(str, n, output + str[i], i + 1, v);
 
-  // exclude
+  // exclude call like as-it-is in output string
   printSubsequences(str, n, output, i + 1, v);
 }
 
