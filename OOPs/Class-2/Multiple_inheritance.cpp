@@ -8,14 +8,14 @@ class B{
     public:
     int chemistry = 3;
 };
-class C : public A,public B{
+class C : public A, public B{
     public:
     int maths = 4;
 };
 int main(){
     C obj;
-    cout<<obj.physics<<endl;
-    cout<<obj.chemistry<<endl;
-    cout<<obj.maths<<endl;
+    cout<<"physics "<<obj.physics<<endl;
+    cout<<"chemistry "<<obj.chemistry<<endl;
+    cout<<"maths "<<obj.maths<<endl;
     return 0;
 }
