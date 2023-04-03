@@ -78,6 +78,8 @@ int main() {
     ramesh.setWeight(101);
     ramesh.getWeight();
 
+
+
     // Dyanamic Memory Allocation
     Animal *suresh = new Animal;
     // 1st way (dot operator)
