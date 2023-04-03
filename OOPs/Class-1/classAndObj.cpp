@@ -15,13 +15,18 @@ private:
 public:
     int age;
     string name;
+    // default Constructor
+    Animal(){
+        cout<<"Constructor called"<<endl;
+    }
+
     // Behaviour or functions
     void eat() {
-        cout << "I am eating";
+        // cout << "I am eating";
     }
 
     void sleep() {
-        cout << "I am sleeping";
+        // cout << "I am sleeping";
     }
 
     // Setter
@@ -35,7 +40,7 @@ public:
 
     // Getter
     void getWeight() {
-        cout << weight;
+        // cout << weight;
     }
 
     // Setter
@@ -48,11 +53,12 @@ public:
         return gender;
     }
 };
+
 int main() {
     // For minimum posible space allocate Class size 1
-    cout<<"Size of Empty class is " << sizeof(Human)<<endl;
+    // cout<<"Size of Empty class is " << sizeof(Human)<<endl;
 
-    cout<<"Size of Animal class is "<< sizeof(Animal)<<endl;
+    // cout<<"Size of Animal class is "<< sizeof(Animal)<<endl;
 
     // Object creation
 
@@ -66,14 +72,14 @@ int main() {
     
     ramesh.setGender("Male");
 
-    cout << "Gender " << ramesh.getGender() << endl;
-    cout << ramesh.age << " " << ramesh.name << endl;
+    // cout << "Gender " << ramesh.getGender() << endl;
+    // cout << ramesh.age << " " << ramesh.name << endl;
 
     // cout << ramesh.weight << " " << ramesh.weight << endl; // Private member can't used outside class
 
     // Calling member functions
     ramesh.eat();
-    cout << endl;
+    // cout << endl;
     // Getter and setter use
     ramesh.setWeight(101);
     ramesh.getWeight();

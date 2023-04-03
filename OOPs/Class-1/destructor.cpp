@@ -5,6 +5,7 @@ class Animal {
     int age;
 
 public:
+/* unlike Constructor for memory alocation Destructor used for free space on the memory */
 
     // Destructor syntax
     ~Animal() { 
@@ -14,9 +15,9 @@ public:
 
 int main() {
 
-    Animal suresh;               // Static allocation -> Automatically calls the destructor
+    Animal suresh; // Static allocation -> Automatically calls the destructor
     Animal *ramesh = new Animal; // Dyanamic allocation
-    delete ramesh;               // Manually deletion
+    delete ramesh; // Manually deletion
 
     return 0;
 }
