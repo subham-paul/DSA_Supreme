@@ -97,7 +97,7 @@ void insertAtPosition(int data, int position, Node* &head, Node* &tail) {
         prev -> next = newNode;
 }
 
-int main() {
+int main() { 
         Node* head = NULL;
         Node* tail = NULL;
         insertAtHead(head, tail,20);
