@@ -9,8 +9,7 @@ void replacePi(char input[])
     if (input[0] == 'p' && input[1] == 'i')
     {
         int n = strlen(input);
-        int i = 3;
-        for (i = n + 1; i >= 2; i--)
+        for (int i = n + 1; i >= 2; i--)
         {
             input[i] = input[i - 2];
         }
