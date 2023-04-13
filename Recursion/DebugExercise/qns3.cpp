@@ -1,31 +1,39 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void replacePi(char input[]) {
-	if(input[0] == '\0'){
+void replacePi(char input[])
+{
+    if (input[0] == '\0')
+    {
         return;
     }
-    if(input[0] == 'p' && input[1] == 'i'){
+    if (input[0] == 'p' && input[1] == 'i')
+    {
         int n = strlen(input);
-        int i=2;
-        for(i = n+1; i >= 2; i--){
-            input[i] = input[i-2];
+        int i = 3;
+        for (i = n + 1; i >= 2; i--)
+        {
+            input[i] = input[i - 2];
         }
-        input[n+2] = '\0';
+        input[n + 2] = '\0';
         input[0] = '3';
         input[1] = '.';
         input[2] = '1';
         input[3] = '4';
-        replacePi(input + 3); 
+        replacePi(input + 3);
     }
-    else{ 
+    else
+    {
         replacePi(input + 1);
     }
 }
-int main(){
-    char input[]={'x','p','i','x'};
+int main()
+{
+    char input[100] = {'x', 'p', 'i', 'x'};
     replacePi(input);
-    for(auto val:input){
-        cout<<val;
+    for (auto val : input)
+    {
+        cout << val;
     }
+    cout << endl;
     return 0;
 }
