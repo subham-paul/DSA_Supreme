@@ -2,10 +2,9 @@
 using namespace std;
 
 void mergeTwoArray(int *arr, int s, int e) {
-    int mid = (s + e) / 2;
-
-    int len1 = mid - s + 1;
-    int len2 = e - mid;
+    int mid = (s + e) / 2; // finding mid of the array
+    int len1 = mid - s + 1; // finding size of left array
+    int len2 = e - mid; // finding size of right array
 
     // assume to Dynamically create arrays named by left and right, for len1 and len2 length
     int* left = new int[len1]; // new Address return, address store by pointer
@@ -55,7 +54,7 @@ void mergeTwoArray(int *arr, int s, int e) {
 void mergeSort(int* arr, int s, int e) {
     // Base Case
     // s == e -> Single element
-    // s>e -> invalid array
+    // s > e -> invalid array
     if (s >= e) return;
 
     int mid = (s + e) / 2;
@@ -79,9 +78,11 @@ int main() {
     // for (int i = 0; i < n; i++) {
     //     cout << arr[i] << " ";
     // }
-    /* for find output using auto loop */
-    for(auto val:arr){
-        cout<<val<<" ";
+
+    /* same as above output print using auto loop */
+    for (auto val : arr)
+    {
+        cout << val << " ";
     }
     cout << endl;
 
