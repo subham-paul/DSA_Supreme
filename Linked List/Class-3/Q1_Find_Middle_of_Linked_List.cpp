@@ -49,9 +49,13 @@ int main() {
     Node *first = new Node(20);
     Node *second = new Node(30);
     Node *third = new Node(40);
+    Node *fourth = new Node(50);
+    Node *fifth = new Node(60);
     head->next = first;
     first->next = second;
     second->next = third;
+    third->next = fourth;
+    fourth->next = fifth;
     print(head);
     Node *middle = getMiddle(head);
     cout << "Middle Node = " << middle->data << " ";
