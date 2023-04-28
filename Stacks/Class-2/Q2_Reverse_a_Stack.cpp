@@ -43,7 +43,7 @@ int main() {
     //     cout<<s.top()<<" ";
     //     s.pop();
     // }
-    cout << endl;
+    // cout << endl;
     reverseStack(s);
     // After reversing
     while (!s.empty()) {

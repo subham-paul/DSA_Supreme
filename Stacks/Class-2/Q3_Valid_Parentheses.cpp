@@ -1,7 +1,7 @@
-// https://leetcode.com/problems/valid-parentheses/description/
 #include <iostream>
 #include <stack>
 using namespace std;
+
 bool isValid(string &s) {
     stack<char> st;
     for (int i = 0; i < s.length(); i++) {
