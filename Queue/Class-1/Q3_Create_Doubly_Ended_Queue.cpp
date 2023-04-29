@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Deque
-{
+class Deque {
 public:
     int *arr;
     int size;
@@ -69,8 +68,7 @@ public:
         arr[front] = data;
     }
     // popFront function
-    void popFront()
-    {   
+    void popFront() {   
         // Empty queue
         if (front == -1)
         {
@@ -98,24 +96,20 @@ public:
         }
     }
     // popRear function
-    void popRear()
-    {
+    void popRear() {
         // Empty queue
-        if (front == -1)
-        {
+        if (front == -1) {
             cout << "Q is empty , cannot pop" << endl;
             return;
         }
         // Single element case
-        else if (front == rear)
-        {
+        else if (front == rear) {
             arr[front] = -1;
             front = -1;
             rear = -1;
         }
         // Circular case
-        else if (rear == 0)
-        {
+        else if (rear == 0) {
             arr[rear] = -1;
             rear = size - 1;
         }
@@ -142,14 +136,23 @@ int main()
     Deque dq(10);
 
     dq.pushRear(10);
+    dq.print();
     dq.pushRear(20);
+    dq.print();
     dq.pushRear(30);
+    dq.print();
     dq.pushRear(40);
+    dq.print();
     dq.pushRear(50);
+    dq.print();
     dq.pushRear(60);
+    dq.print();
     dq.pushRear(70);
+    dq.print();
     dq.pushRear(80);
+    dq.print();
     dq.pushRear(90);
+    dq.print();
     dq.pushRear(100);
     dq.print();
     return 0;
