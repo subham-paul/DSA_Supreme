@@ -7,7 +7,8 @@ class abc {
     int z;
 
     public:
-        // abc(){
+        // Old style
+        /* // abc(){
         //     x = 0;
         //     y = new int(0);
         // }
@@ -15,7 +16,11 @@ class abc {
             x = _x;
             y = new int(_y);
             z = _z;
-        }
+        } */
+
+        // Initialization List, This is New way to Contructor Define, here const variable also initialised
+        abc(int _x, int _y, int _z = 0) : x(_x), y(new int(_y)), z(_z) {}
+
         int getX() const {
             x = 11;
             return x;
