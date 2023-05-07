@@ -35,7 +35,6 @@ Node *buildTree(int data)
     return root;
 }
 // Normal Level order traversal
-
 /*
 void levelOrderTraversal(Node* root){
     // Empty tree
