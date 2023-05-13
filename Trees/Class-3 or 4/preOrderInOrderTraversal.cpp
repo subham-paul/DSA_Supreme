@@ -45,7 +45,8 @@ Node* buildTreeFromPreOrderInOrder(int inorder[], int preorder[], int size, int 
     return root;
 }  
 
-Node* buildTreeFromPostOrderInOrder(int inorder[], int postorder[], int &postIndex, int size, int inorderStart, int inorderEnd, <int,int> &mapping) {
+Node* buildTreeFromPostOrderInOrder(int inorder[], int postorder[], int &postIndex, int size, 
+int inorderStart, int inorderEnd, unordered_map<int,int> &mapping) {
     //basecase
     if(postIndex < 0 || inorderStart > inorderEnd) {
         return NULL;
