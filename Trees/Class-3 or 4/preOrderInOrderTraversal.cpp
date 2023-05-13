@@ -26,7 +26,8 @@ int findPosition(int arr[], int n, int element) {
 }
 
 //build tree from inorder and preorder traversal
-Node* buildTreeFromPreOrderInOrder(int inorder[], int preorder[], int size, int &preIndex, int inorderStart, int inorderEnd) {
+Node* buildTreeFromPreOrderInOrder(int inorder[], int preorder[], int size, int &preIndex, 
+                                    int inorderStart, int inorderEnd) {
     //base case
     if(preIndex >= size || inorderStart > inorderEnd) {
         return NULL;
@@ -46,7 +47,7 @@ Node* buildTreeFromPreOrderInOrder(int inorder[], int preorder[], int size, int 
 }  
 
 Node* buildTreeFromPostOrderInOrder(int inorder[], int postorder[], int &postIndex, int size, 
-int inorderStart, int inorderEnd, unordered_map<int,int> &mapping) {
+                                    int inorderStart, int inorderEnd, unordered_map<int,int> &mapping) {
     //basecase
     if(postIndex < 0 || inorderStart > inorderEnd) {
         return NULL;
@@ -131,7 +132,8 @@ int main() {
     createMapping(mapping, inorder, size);
 
     cout << "Building the tree: " << endl;
-    Node* root = buildTreeFromPostOrderInOrder(inorder, postorder,postIndex,size, inorderStart, inorderEnd, mapping);
+    Node* root = buildTreeFromPostOrderInOrder(inorder, postorder,postIndex,size, inorderStart, 
+                                                inorderEnd, mapping);
 
     cout << "Printing the tree " << endl;
     levelOrderTraversal(root);
