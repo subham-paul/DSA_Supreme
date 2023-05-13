@@ -1,23 +1,19 @@
 #include <iostream>
 using namespace std;
-class Node
-{
+class Node {
 public:
     int data;
     Node *left;
     Node *right;
-    Node(int data)
-    {
+    Node(int data) {
         this->data = data;
         left = NULL;
         right = NULL;
     }
 };
-Node *buildTree(int data)
-{
+Node *buildTree(int data) {
     // -1 data indicates that we have the leaf node (Base Case)
-    if (data == -1)
-    {
+    if (data == -1) {
         return NULL;
     }
     // Create the root node and hence solved 1 case
@@ -33,9 +29,9 @@ Node *buildTree(int data)
     root->right = buildTree(rightData);
     return root;
 }
-void postOrderTraversal(Node* root){
+void postOrderTraversal(Node* root) {
     // base case
-    if(root == NULL){
+    if(root == NULL) {
         return;
     }
     // Left 
@@ -45,8 +41,7 @@ void postOrderTraversal(Node* root){
     // Node
     cout<<root->data<<" ";
 }
-int main()
-{
+int main() {
     Node *root;
     int data;
     cout << "Enter data for root node" << endl;

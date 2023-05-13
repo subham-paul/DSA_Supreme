@@ -41,6 +41,7 @@ void preOrderTraversal(Node* root) {
     // Right
     preOrderTraversal(root->right);
 }
+
 int main() {
     Node *root;
     int data;

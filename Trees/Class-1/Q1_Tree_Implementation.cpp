@@ -2,17 +2,16 @@
 using namespace std;
 
 class Node {
-    public:
-        int data;
-        Node *left;
-        Node *right;
-        Node(int data)
-        {
-            this->data = data;
-            left = NULL;
-            right = NULL;
-        }
-    };
+public:
+    int data;
+    Node *left;
+    Node *right;
+    Node(int data) {
+        this->data = data;
+        left = NULL;
+        right = NULL;
+    }
+};
 
 Node *buildTree(int data) {
     // -1 data indicates that we have the leaf node (Base Case)

@@ -1,24 +1,21 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-class Node
-{
+
+class Node {
 public:
     int data;
     Node *left;
     Node *right;
-    Node(int data)
-    {
+    Node(int data) {
         this->data = data;
         left = NULL;
         right = NULL;
     }
 };
-Node *buildTree(int data)
-{
+Node *buildTree(int data) {
     // -1 data indicates that we have the leaf node (Base Case)
-    if (data == -1)
-    {
+    if (data == -1) {
         return NULL;
     }
     // Create the root node and hence solved 1 case
@@ -36,26 +33,26 @@ Node *buildTree(int data)
 }
 // Normal Level order traversal
 /*
-void levelOrderTraversal(Node* root){
+void levelOrderTraversal(Node* root) {
     // Empty tree
-    if(root == NULL){
+    if(root == NULL) {
         return;
     }
     queue<Node*>q;
     // Push the root in queue
     q.push(root);
     // Run the loop until queue becomes empty
-    while(!q.empty()){
+    while(!q.empty()) {
         // Fetch front node and then pop
         Node* temp = q.front();
         q.pop();
         cout<<temp->data<<" ";
         // left child exists
-        if(temp->left){
+        if(temp->left) {
             q.push(temp->left);
         }
         // right child exists
-        if(temp->right){
+        if(temp->right) {
             q.push(temp->right);
         }
     }
@@ -63,11 +60,9 @@ void levelOrderTraversal(Node* root){
 */
 
 // To print the tree level wise
-void levelOrderTraversal(Node *root)
-{
+void levelOrderTraversal(Node *root) {
     // Empty tree
-    if (root == NULL)
-    {
+    if (root == NULL) {
         return;
     }
     queue<Node *> q;
@@ -75,13 +70,11 @@ void levelOrderTraversal(Node *root)
     q.push(root);
     q.push(NULL);
     // Run the loop until queue becomes empty
-    while (!q.empty())
-    {
+    while (!q.empty()) {
         // Fetch front node and then pop
         Node *temp = q.front();
         q.pop();
-        if (temp == NULL)
-        {
+        if (temp == NULL) {
             // go to the next line
             cout << endl;
             // Marking for next level
@@ -89,25 +82,19 @@ void levelOrderTraversal(Node *root)
             {
                 q.push(NULL);
             }
-        }
-        else
-        {
+        } else {
             cout << temp->data << " ";
-            // left child exists
-            if (temp->left)
-            {
+            if (temp->left) { // check left child exists
                 q.push(temp->left);
             }
-            // right child exists
-            if (temp->right)
-            {
+            if (temp->right) { // check right child exists
                 q.push(temp->right);
             }
         }
     }
 }
-int main()
-{
+
+int main() {
     Node *root;
     int data;
     cout << "Enter data for root node" << endl;
