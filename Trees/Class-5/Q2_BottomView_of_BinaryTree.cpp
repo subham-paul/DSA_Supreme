@@ -29,21 +29,17 @@ Node* buildTree(int data) {
 	cin >> rightData;
 	root-> right = buildTree(rightData);
 	return root;
-	
 }
 
 void printBottomView(Node* root) {
     if(root == NULL )
         return;
     map<int, int> bottomNode; // create a map for storing HD -> bottom Node->data
-
     queue< pair<Node*, int>> q;
     q.push(make_pair(root, 0));
-
     while(!q.empty()) {
         pair<Node*, int> temp = q.front();
         q.pop();
-
         Node* frontNode = temp.first;
         int hd = temp.second;
         bottomNode[hd] = frontNode->data; //crete entry
