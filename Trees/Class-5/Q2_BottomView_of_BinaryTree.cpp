@@ -35,7 +35,7 @@ Node* buildTree(int data) {
 void printBottomView(Node* root) {
     if(root == NULL )
         return;
-    map<int, int> topNode; // create a map for storing HD -> bottom Node->data
+    map<int, int> bottomNode; // create a map for storing HD -> bottom Node->data
 
     queue< pair<Node*, int>> q;
     q.push(make_pair(root, 0));
@@ -46,14 +46,14 @@ void printBottomView(Node* root) {
 
         Node* frontNode = temp.first;
         int hd = temp.second;
-        topNode[hd] = frontNode->data; //crete entry
+        bottomNode[hd] = frontNode->data; //crete entry
         if(frontNode -> left)
             q.push(make_pair(frontNode->left, hd-1));
         if(frontNode -> right)
             q.push(make_pair(frontNode->right, hd+1));
     }
     cout << "Printing the BOTTOM VIEW answer: " << endl;
-    for(auto i: topNode) {
+    for(auto i: bottomNode) {
         cout << i.first << " -> " << i.second << endl;
     }
 }
