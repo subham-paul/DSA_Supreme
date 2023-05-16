@@ -115,96 +115,17 @@ int height(Node* root) {
 	return ans;
 }
 
-void printRightView(Node* root, vector<int> &ans, int level) {
-	//base case
-	if(root == NULL) 
-		return;
-
-	if(level == ans.size()) {
-		ans.push_back(root->data);
-	}
-
-	//right
-	printRightView(root->right, ans, level+1);
-
-	//left
-	printRightView(root->left, ans, level+1);
-}
-
 void printLeftView(Node* root, vector<int> &ans, int level) {
 	//base case
-	if(root == NULL) 
-		return;
+	if(root == NULL) return;
 
 	if(level == ans.size()) {
 		ans.push_back(root->data);
 	}
-
 	//left
 	printLeftView(root->left, ans, level+1);
 	//right
 	printLeftView(root->right, ans, level+1);
-	
-}
-
-void printLeftBoundary(Node* root) {
-	//base case
-	//if root is NULL, then go back
-	if(root == NULL)
-		return;
-	//if root is a leaf node , then go back 
-	if(root->left == NULL && root->right == NULL)
-		return;
-
-	cout << root->data << " ";
-	
-	if(root->left) {
-		printLeftBoundary(root->left);
-	}
-	else {
-		printLeftBoundary(root->right);
-	}
-}
-
-void printLeafBoundary(Node* root) {
-	//base case
-	if(root == NULL)
-		return;
-	if(root->left == NULL && root->right == NULL) {
-		cout << root->data << " ";
-	}
-	printLeafBoundary(root->left);
-	printLeafBoundary(root->right);
-}
-
-void printRightBoundary(Node* root) {
-	//base case
-	if(root == NULL)
-		return;
-	if(root->left == NULL && root->right == NULL)
-		return ;
-
-	if(root->right) {
-		printRightBoundary(root->right);
-	}
-	else {
-		printRightBoundary(root->left);
-	}
-	
-	cout << root->data << " ";
-}
-
-void boundaryTraversal(Node* root) {
-	if(root == NULL)
-		return;
-
-	cout << root->data << " ";
-	//A
-	printLeftBoundary(root->left);
-	//B
-	printLeafBoundary(root);
-	//C
-	printRightBoundary(root->right);
 }
 
 int main() {
@@ -212,7 +133,14 @@ int main() {
     int data;
     cout << "Enter data for root node " << endl;
     cin >> data;
+	vector<int> ans;
+	int level = 0;
     root = buildTree(data);
-	printLeftView(root);
+	printLeftView(root, ans, level);
+	cout<<"Printing the LEFT VIEW "<<endl;
+	for(auto i : ans){
+		cout<<i<<" ";
+	}
+	cout<<endl;
 	return 0;
 }
