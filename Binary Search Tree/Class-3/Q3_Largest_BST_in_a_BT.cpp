@@ -115,7 +115,7 @@ int main(){
 	sixth->left = seventh;
 	sixth->right= eight;
 	
-	cout << "Printing the tree" << endl;
+	cout << "Printing the Binary Tree" << endl;
 	levelOrderTraversal(root);
 	int ans = 0;
 	findLargestBST(root,ans);
