@@ -13,6 +13,7 @@ public:
     void insert(int value) {
         // value insert karo end me
         size = size + 1;
+        cout<<"Size "<<size<<endl;
         int index = size;
         arr[index] = value;
 
