@@ -5,11 +5,9 @@ class Heap {
 public:
     int arr[101];
     int size;
-
     Heap() {
         size = 0;
     }
-
     void insert(int value) {
         // value insert karo end me
         size = size + 1;
