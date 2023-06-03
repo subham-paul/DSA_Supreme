@@ -1,3 +1,7 @@
+/* 
+    Time Complexity-> O(n(m^2)) [n is no of sting, m is avg length of string]
+    Space Complexity-> O(m^2)
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
