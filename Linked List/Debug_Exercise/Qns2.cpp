@@ -3,19 +3,21 @@ using namespace std;
 
 struct ListNode {
     int data;
-    ListNode next;
+    ListNode* next;
 };
 
-ListNodehead;
+ListNode* head;
+
+//ListNodehead;
 
 void insert(int x) {
-    ListNode temp = new ListNode;
+    ListNode* temp = new ListNode();
     temp->data = x;
     temp->next = NULL;
     if(head == NULL) {
         head = temp;
     } else {
-        ListNode current = head;
+        ListNode* current = head;
         while(current->next != NULL) {
             current = current->next;
         }
@@ -23,11 +25,11 @@ void insert(int x) {
     }
 }
 
-ListNode* middleNode(ListNode* head) {
-        ListNode* last = head;
-        ListNode* first = head;
+ListNode* middleNode(ListNode *&head) {
+        ListNode* last = head->next;
+        ListNode* first = head->next->next;
 
-        while (first != NULL || first->next != NULL) {
+        while (first != NULL && first->next != NULL) {
             last = last->next;
             first = first->next->next;
         }
@@ -35,24 +37,25 @@ ListNode* middleNode(ListNode* head) {
         return last;
     }
 
-void print() {
-    ListNode *temp = head;
+/* oid print() {
+    ListNode* temp = head;
     cout << "List: ";
     while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
     cout << endl;
-}
+} */
 
 int main() {
     head = NULL;
     insert(1);
     insert(2);
     insert(3);
-    middleNode(head);
-    cout << "Middle Node = " << middle->data << " ";
-    // print();
+    insert(4);
+    insert(5);
+    ListNode *ans = middleNode(head);
+    cout << "Middle Node = " << ans->data << " ";
     cout << endl;
     return 0;
 }
