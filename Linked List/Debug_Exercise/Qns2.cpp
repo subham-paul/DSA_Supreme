@@ -8,8 +8,6 @@ struct ListNode {
 
 ListNode* head;
 
-//ListNodehead;
-
 void insert(int x) {
     ListNode* temp = new ListNode();
     temp->data = x;
@@ -26,26 +24,16 @@ void insert(int x) {
 }
 
 ListNode* middleNode(ListNode *&head) {
-        ListNode* last = head->next;
-        ListNode* first = head->next->next;
+    ListNode* last = head->next;
+    ListNode* first = head->next->next;
 
-        while (first != NULL && first->next != NULL) {
-            last = last->next;
-            first = first->next->next;
-        }
-
-        return last;
+    while (first != NULL && first->next != NULL) {
+        last = last->next;
+        first = first->next->next;
     }
 
-/* oid print() {
-    ListNode* temp = head;
-    cout << "List: ";
-    while (temp != NULL) {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-    cout << endl;
-} */
+    return last;
+}
 
 int main() {
     head = NULL;
