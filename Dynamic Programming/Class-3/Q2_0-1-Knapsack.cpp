@@ -3,17 +3,12 @@
 using namespace std;
 
 // index = index  of last element
-int solveUsingRecursion(int weight[], int value[], int index, int capacity)
-{
+int solveUsingRecursion(int weight[], int value[], int index, int capacity) {
     // base case -> only 1 item
-    if (index == 0)
-    {
-        if (weight[0] <= capacity)
-        {
+    if (index == 0) {
+        if (weight[0] <= capacity) {
             return value[0];
-        }
-        else
-            return 0;
+        } else return 0;
     }
 
     // include and exclude
@@ -27,17 +22,12 @@ int solveUsingRecursion(int weight[], int value[], int index, int capacity)
     return ans;
 }
 
-int solveUsingMem(int weight[], int value[], int index, int capacity, vector<vector<int>> &dp)
-{
+int solveUsingMem(int weight[], int value[], int index, int capacity, vector<vector<int>> &dp) {
     // base case -> only 1 item
-    if (index == 0)
-    {
-        if (weight[0] <= capacity)
-        {
+    if (index == 0) {
+        if (weight[0] <= capacity) {
             return value[0];
-        }
-        else
-            return 0;
+        } else return 0;
     }
 
     if (dp[index][capacity] != -1)
@@ -54,24 +44,17 @@ int solveUsingMem(int weight[], int value[], int index, int capacity, vector<vec
     return dp[index][capacity];
 }
 
-int solveUsingTabulation(int weight[], int value[], int n, int capacity)
-{
+int solveUsingTabulation(int weight[], int value[], int n, int capacity) {
     vector<vector<int>> dp(n, vector<int>(capacity + 1, 0));
 
-    for (int w = weight[0]; w <= capacity; w++)
-    {
-        if (weight[0] <= capacity)
-        {
+    for (int w = weight[0]; w <= capacity; w++) {
+        if (weight[0] <= capacity) {
             dp[0][w] = value[0];
-        }
-        else
-            dp[0][w] = 0;
+        } else dp[0][w] = 0;
     }
 
-    for (int index = 1; index < n; index++)
-    {
-        for (int wt = 0; wt <= capacity; wt++)
-        {
+    for (int index = 1; index < n; index++) {
+        for (int wt = 0; wt <= capacity; wt++) {
             // include and exclude
             int include = 0;
             if (weight[index] <= wt)
@@ -85,26 +68,21 @@ int solveUsingTabulation(int weight[], int value[], int n, int capacity)
     return dp[n - 1][capacity];
 }
 
-int solveUsingSO(int weight[], int value[], int n, int capacity)
-{
+int solveUsingSO(int weight[], int value[], int n, int capacity) {
 
     vector<int> prev(capacity + 1, 0);
     vector<int> curr(capacity + 1, 0);
 
-    for (int w = weight[0]; w <= capacity; w++)
-    {
-        if (weight[0] <= capacity)
-        {
+    for (int w = weight[0]; w <= capacity; w++) {
+        if (weight[0] <= capacity) {
             prev[w] = value[0];
         }
         else
             prev[w] = 0;
     }
 
-    for (int index = 1; index < n; index++)
-    {
-        for (int wt = 0; wt <= capacity; wt++)
-        {
+    for (int index = 1; index < n; index++) {
+        for (int wt = 0; wt <= capacity; wt++) {
             // include and exclude
             int include = 0;
             if (weight[index] <= wt)
@@ -120,25 +98,20 @@ int solveUsingSO(int weight[], int value[], int n, int capacity)
     return prev[capacity];
 }
 
-int solveUsingSO2(int weight[], int value[], int n, int capacity)
-{
+int solveUsingSO2(int weight[], int value[], int n, int capacity) {
 
     vector<int> curr(capacity + 1, 0);
 
-    for (int w = weight[0]; w <= capacity; w++)
-    {
-        if (weight[0] <= capacity)
-        {
+    for (int w = weight[0]; w <= capacity; w++) {
+        if (weight[0] <= capacity) {
             curr[w] = value[0];
         }
         else
             curr[w] = 0;
     }
 
-    for (int index = 1; index < n; index++)
-    {
-        for (int wt = capacity; wt >= 0; wt--)
-        {
+    for (int index = 1; index < n; index++) {
+        for (int wt = capacity; wt >= 0; wt--) {
             // include and exclude
             int include = 0;
             if (weight[index] <= wt)
@@ -152,8 +125,7 @@ int solveUsingSO2(int weight[], int value[], int n, int capacity)
     return curr[capacity];
 }
 
-int main()
-{
+int main() {
 
     int weight[] = {4, 5, 1};
     int value[] = {1, 2, 3};
