@@ -24,16 +24,16 @@ void insert(int x) {
 }
 
 ListNode* middleNode(ListNode *&head) {
-    ListNode* last = head->next;
-    ListNode* first = head->next->next;
+        ListNode* last = head->next;
+        ListNode* first = head->next->next;
 
-    while (first != NULL && first->next != NULL) {
-        last = last->next;
-        first = first->next->next;
+        while (first != NULL && first->next != NULL) {
+            last = last->next;
+            first = first->next->next;
+        }
+
+        return last;
     }
-
-    return last;
-}
 
 int main() {
     head = NULL;
