@@ -31,14 +31,18 @@ public:
 int main() {
     Graph g;
     // undirected graph
-    // g.addEdge(0,1,0);
-    // g.addEdge(1,2,0);
-    // g.addEdge(0,2,0);
+    g.addEdge(0, 1, 0);
+    g.addEdge(0, 3, 0);
+    g.addEdge(1, 3, 0);
+    g.addEdge(1, 2, 0);
+    g.addEdge(2, 3, 0);
 
     // directed graph
-    g.addEdge(1, 2, 1);
-    g.addEdge(0, 1, 1);
-    g.addEdge(0, 2, 1);
+    // g.addEdge(0, 1, 1);
+    // g.addEdge(0, 3, 1);
+    // g.addEdge(1, 3, 1);
+    // g.addEdge(1, 2, 1);
+    // g.addEdge(2, 3, 1);
 
     g.printAdjList();
     return 0;
