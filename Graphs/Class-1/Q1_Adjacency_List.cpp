@@ -11,15 +11,16 @@ public:
     void addEdge(int u, int v, bool direction) {
         // direction = 0 -> undirected
         // direction = 1 -> directed
-        // Create an edge from u to v
-        adjList[u].push_back(v);
+        
+        adjList[u].push_back(v); // Create an edge from u to v
         // if undirected
-        if (direction == 0)
+        if (direction == 0) {
             adjList[v].push_back(u); // edge created from v to u
+        }
     }
     void printAdjList() {
         for (auto node : adjList) {
-            cout << node.first << "-> ";
+            cout << node.first << " -> ";
             for (auto neighbours : node.second) {
                 cout << neighbours << ", ";
             }
