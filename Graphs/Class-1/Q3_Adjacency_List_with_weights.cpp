@@ -5,6 +5,8 @@ using namespace std;
 class Graph {
 public:
     unordered_map<int, list<pair<int, int>>> adjList;
+    //          src node, list of neighbours, pair of destNode and weight
+
     void addEdge(int u, int v, int weight, bool direction) {
         // direction = 0 -> undirected
         // direction = 1 -> directed
