@@ -3,6 +3,7 @@
 #include <list>
 #include <queue>
 /* DFS is same as PreOrder, InOrder Traversal */
+/* TC-> O(v+e), SC-> O(v+e) */
 using namespace std;
 template <typename T>
 class Graph {
@@ -38,15 +39,20 @@ public:
 };
 int main() {
     Graph<int> g;
+    int n = 7; // n-> number of nodes in Graph
+
     g.addEdge(0, 1, 0);
-    g.addEdge(1, 2, 0);
-    g.addEdge(1, 3, 0);
-    g.addEdge(3, 5, 0);
+    g.addEdge(1, 6, 0);
+    g.addEdge(1, 4, 0);
+    g.addEdge(4, 5, 0);
+    g.addEdge(4, 3, 0);
+    g.addEdge(3, 2, 0);
     g.addEdge(3, 7, 0);
-    g.addEdge(7, 6, 0);
-    g.addEdge(7, 4, 0);
+
     unordered_map<int, bool> visited;
-    for (int i = 0; i < 7; i++) {
+
+    for (int i = 0; i < n; i++) {
+        // non visited node treat as a source and traversal every node
         if (!visited[i]) {
             g.dfs(i, visited);
         }

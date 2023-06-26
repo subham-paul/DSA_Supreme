@@ -3,6 +3,7 @@
 #include <list>
 #include <queue>
 /* BFS is same as Level Order Traversal */
+/* TC-> O(v+e), SC-> O(v+e) */
 using namespace std;
 template <typename T>
 class Graph {
@@ -34,7 +35,7 @@ public:
             // Front node
             int frontNode = q.front();
             q.pop();
-            cout << frontNode;
+            cout << frontNode << ", ";
             // Insert neighbours
             for (auto neighbours : adjList[frontNode]) {
                 // If not visited then insert
@@ -48,6 +49,7 @@ public:
 };
 int main() {
     Graph<int> g;
+    int n = 7; // n-> number of nodes in Graph
     g.addEdge(0, 1, 0);
     g.addEdge(1, 2, 0);
     g.addEdge(1, 3, 0);
@@ -55,11 +57,15 @@ int main() {
     g.addEdge(3, 7, 0);
     g.addEdge(7, 6, 0);
     g.addEdge(7, 4, 0);
+
     unordered_map<int, bool> visited;
-    for (int i = 0; i < 7; i++) {
+
+    for (int i = 0; i < n; i++) {
+        // non visited node treat as a source and traversal every node
         if (!visited[i]){
             g.bfs(i, visited);
         }
     }
+    cout << endl;
     return 0;
 }
