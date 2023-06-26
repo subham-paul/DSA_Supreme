@@ -30,19 +30,30 @@ public:
 };
 int main() {
     Graph g;
-    // undirected graph
-    g.addEdge(0, 1, 0);
-    g.addEdge(0, 3, 0);
-    g.addEdge(1, 3, 0);
-    g.addEdge(1, 2, 0);
-    g.addEdge(2, 3, 0);
+    /* undirected graph */
+    // g.addEdge(0, 1, 0);
+    // g.addEdge(0, 3, 0);
+    // g.addEdge(1, 3, 0);
+    // g.addEdge(1, 2, 0);
+    // g.addEdge(2, 3, 0);
 
-    // directed graph
-    // g.addEdge(0, 1, 1);
-    // g.addEdge(0, 3, 1);
-    // g.addEdge(1, 3, 1);
-    // g.addEdge(1, 2, 1);
-    // g.addEdge(2, 3, 1);
+    /* Output:
+    2 -> 1, 3, 
+    3 -> 0, 1, 2, 
+    0 -> 1, 3, 
+    1 -> 0, 3, 2,  */
+
+    /* directed graph */
+    g.addEdge(0, 1, 1);
+    g.addEdge(0, 3, 1);
+    g.addEdge(1, 3, 1);
+    g.addEdge(1, 2, 1);
+    g.addEdge(2, 3, 1);
+
+    /* Output
+    2 -> 3, 
+    0 -> 1, 3, 
+    1 -> 3, 2,  */
 
     g.printAdjList();
     return 0;
