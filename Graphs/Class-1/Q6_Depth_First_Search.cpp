@@ -26,8 +26,8 @@ public:
             cout << endl;
         }
     }
-    void dfs(int src, unordered_map<int, bool> &visited) {
-        cout << src << " ";
+    void dfs(T src, unordered_map<T, bool> &visited) {
+        cout << src << ", ";
         visited[src] = true;
         for (auto neighbour : adjList[src]) {
             if (!visited[neighbour]) {
