@@ -18,5 +18,6 @@
         "xhash": "cpp",
         "xtree": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.fontSize": 16
 }
