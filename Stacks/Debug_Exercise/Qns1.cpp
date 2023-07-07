@@ -37,12 +37,12 @@ void nextGreaterElementRight(vector<int> input, int n){
 }
 
 int main(){
-    Stack s(10);
-    // Insertion
-    s.push(10);
-    s.push(20);
-    s.push(30);
-    s.push(40);
-    nextGreaterElementRight(s, 10)
+    vector<int>v;
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    int size = v.size();
+    nextGreaterElementRight(v, size);
     return 0;
 }
