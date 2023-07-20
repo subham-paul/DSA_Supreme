@@ -22,10 +22,14 @@ void nextGreaterElementLeft(vector<int> input, int n){
 		vector<int> left(n,-1);
 		stack<int> s;
 		for(int i=0; i<n; i++){
-				while(!s.empty() && input[s.top()] <= input[i]){
+				if(s.empty()){
+						s.push(i);
+						continue;
+				}
+				while(!s.empty() && input[s.top()] < input[i]){
+						left[s.top()] = input[i];
 						s.pop();
 				}
-				left[i] = s.top();
 				s.push(i);
 		}
 }
