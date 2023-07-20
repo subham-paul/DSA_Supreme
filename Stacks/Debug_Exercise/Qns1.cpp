@@ -44,5 +44,8 @@ int main(){
     v.push_back(40);
     int size = v.size();
     nextGreaterElementRight(v, size);
+    for(auto a : v){
+        cout << a << ", ";
+    }
     return 0;
 }
