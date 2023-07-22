@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <stack>
+#include<bits/stdc++.h>
 using namespace std;
 class Stack{
     public:
@@ -21,30 +19,37 @@ class Stack{
 };
 
 void reverseStack(stack<int> &input, stack<int> &extra) {
+	if(input.empty()){
+        return;
+    }
     int x = input.top();
     input.pop();
-    reverseStack(input, extra);
-    for(int i=0; input.empty(); i++){
+    reverseStack(input,extra);
+    for(int i=0; input.empty()==false; i++){
         extra.push(input.top());
         input.pop();
     }
     input.push(x);
-    for(int i=0; extra.empty(); i++){
+    for(int i=0; extra.empty()==false; i++){
         input.push(extra.top());
         extra.pop();
     }
+    return;
 }
 
 int main(){
-    vector<int>v;
-    v.push_back(10);
-    v.push_back(20);
-    v.push_back(30);
-    v.push_back(40);
-    int size = v.size();
-    
-    for(auto a : v){
-        cout << a << ", ";
+    stack<int> s;
+    stack<int> s1;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.push(4);
+    s.push(5);
+    reverseStack(s, s1);
+
+    for (int i = 0; i < 5; i++) {
+        cout << s.top() << " ";
+        s.pop();
     }
     return 0;
 }
