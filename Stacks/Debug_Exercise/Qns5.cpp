@@ -11,6 +11,7 @@ void deleteMiddle(stack<int>& s, int k) {
         count++;
         if (count == k) {
             s.pop();
+            break;
         }
     }
 
