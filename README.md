@@ -147,6 +147,6 @@ We hope this repository serves as a helpful guide on your journey to mastering D
 
 **SUBHAM PAUL**
 
-**Contact:** subhampaul456@gmail.com
+**Contact:** https://www.linkedin.com/in/subham-paul-india/
 
 **GitHub:** https://github.com/subham-paul
