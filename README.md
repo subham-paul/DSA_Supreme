@@ -138,6 +138,10 @@ git clone https://github.com/subham-paul/DSA_Supreme.git
 
 Contributions to this repository are welcome! If you find any issues or want to improve the content, please feel free to submit a pull request.
 
+## Notes
+
+Here I store my handwritten notes in this repository. Please check here:  https://github.com/subham-paul/DSA_Supreme_Notes
+
 ## License
 
 This repository is licensed under the [MIT License](LICENSE).
@@ -147,6 +151,6 @@ We hope this repository serves as a helpful guide on your journey to mastering D
 
 **SUBHAM PAUL**
 
-**Contact:** https://www.linkedin.com/in/subham-paul-india/
+**Connect Me:** https://www.linkedin.com/in/subham-paul-india/
 
 **GitHub:** https://github.com/subham-paul
