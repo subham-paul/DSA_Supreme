@@ -52,7 +52,7 @@ public:
     }
 };
 int main() {
-    Stack s(10);
+    Stack s(4);
     // Insertion
     s.push(10);
     s.push(20);
