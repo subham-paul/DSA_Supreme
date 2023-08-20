@@ -7,11 +7,9 @@ public:
     MyQueue() {
         
     }
-    
     void push(int x) {
         s1.push(x);
     }
-    
     int pop() {
         while (!s1.empty()){
             s2.push(s1.top());
@@ -25,7 +23,6 @@ public:
         }
         return val;
     }
-    
     int peek() {
         while (!s1.empty()){
             s2.push(s1.top());
@@ -38,7 +35,6 @@ public:
         }
         return t;
     }
-    
     bool empty() {
         return s1.empty();
     }
