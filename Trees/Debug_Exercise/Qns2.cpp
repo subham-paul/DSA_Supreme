@@ -17,9 +17,8 @@ void preorderTraversal(Node* node) {
     if (node == nullptr) {
         return;
     }
-
+    std::cout << node->data << " ";
     for (int i = 0; i < node->children.size(); i++) {
-        std::cout << node->data << " ";
         preorderTraversal(node->children[i]);
     }
 }
