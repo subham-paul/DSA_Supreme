@@ -4,7 +4,7 @@
 class Node {
 public:
     int data;
-    std::vector<Node> children;
+    std::vector<Node*> children;
 
     Node(int value) : data(value) {}
 
