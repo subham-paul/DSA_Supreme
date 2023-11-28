@@ -7,7 +7,7 @@ Welcome to the **Data Structures and Algorithms in C++** repository! This reposi
 
 *This Github repository's questions are tracked every day by Google Sheet. It is beneficial for revision at any time any question and I update on this every day basis.*
 
-*Here is my [Data Structure and Algorithm Questions List](https://docs.google.com/spreadsheets/d/1RH2CcqTEKM8zjCVka-zVtIpRIqiPGr1wRxMaTw4nfUE/edit?usp=sharing){:target="_blank"}.*
+*Here is my [Data Structure and Algorithm Questions](https://docs.google.com/spreadsheets/d/1RH2CcqTEKM8zjCVka-zVtIpRIqiPGr1wRxMaTw4nfUE/edit?usp=sharing) List.*
 
 ## Table of Contents
 
