@@ -15,16 +15,13 @@ int main() {
             for (int k = j + 1; k < arr.size(); k++) {
                 int element3 = arr[k];
 
-                for (int l = k +1; l < arr.size(); l++)
-                {
+                for (int l = k +1; l < arr.size(); l++) {
                     int element4 = arr[l];
+                    
                     if (element1 + element2 + element3 + element4 == sum) {
-                    cout << element1 << "," << element2 << "," << element3 << "," << element4 << endl;
+                        cout << element1 << "," << element2 << "," << element3 << "," << element4 << endl;
+                    }
                 }
-                }
-                
-
-                
             }
         }
     }
