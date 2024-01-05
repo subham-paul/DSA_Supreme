@@ -2,8 +2,7 @@
 #include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
     // declaring vector of vector, this will work like 2D array
     vector<vector<int>> arr;
 
@@ -19,10 +18,8 @@ int main()
 
     cout << "Output of the Array" << endl;
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        for (int j = 0; j < arr[i].size(); j++)
-        {
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr[i].size(); j++) {
             cout << arr[i][j] << " ";
         }
         cout << endl;
@@ -37,10 +34,8 @@ int main()
     cin >> row >> col;
     vector<vector<int>> arr(row, vector<int>(col, -10));
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        for (int j = 0; j < arr[i].size(); j++)
-        {
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr[i].size(); j++) {
             cout << arr[i][j] << "  ";
         }
         cout << endl;
