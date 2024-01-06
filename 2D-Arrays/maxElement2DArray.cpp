@@ -20,7 +20,6 @@ int main() {
     }
 
     int max = INT_MIN;
-
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 4; j++) {
             if (arr[i][j] > max) {
@@ -30,7 +29,6 @@ int main() {
     }
 
     int min = INT_MAX;
-
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 4; j++) {
             if (arr[i][j] < min) {
@@ -38,7 +36,8 @@ int main() {
             }
         }
     }
-    cout<<endl;
+    
+    cout << endl;
     cout << "Minimum element in array is: " << min << endl;
     cout << "Maximum element in array is: " << max << endl;
     return 0;
