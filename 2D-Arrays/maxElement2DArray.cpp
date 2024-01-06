@@ -12,10 +12,8 @@ int main() {
 
     // row-wise print
     cout << "\nYour current array is: " << endl;
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
             cout << arr[i][j] << "  ";
         }
         cout << endl;
@@ -23,12 +21,9 @@ int main() {
 
     int max = INT_MIN;
 
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (arr[i][j] > max)
-            {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (arr[i][j] > max) {
                 max = arr[i][j];
             }
         }
@@ -36,12 +31,9 @@ int main() {
 
     int min = INT_MAX;
 
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (arr[i][j] < min)
-            {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (arr[i][j] < min) {
                 min = arr[i][j];
             }
         }

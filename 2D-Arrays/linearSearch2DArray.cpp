@@ -11,10 +11,8 @@ int main() {
 
     // row-wise print
     cout << "\nYour current array is: " << endl;
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
             cout << arr[i][j] << "  ";
         }
         cout << endl;
@@ -25,12 +23,9 @@ int main() {
     cin >> n;
 
     int flag = 0;
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (arr[i][j] == n)
-            {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (arr[i][j] == n) {
                 flag = 1;
                 break;
             }
