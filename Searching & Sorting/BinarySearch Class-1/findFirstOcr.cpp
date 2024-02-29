@@ -24,7 +24,8 @@ int firstOcc(vector<int> arr, int target) {
 }
 
 int main() {
-  vector<int> v{1, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 6, 7};
+  vector<int> v{1, 3, 3, 4, 4, 6, 7};
+  //            0  1  2  3  4  5  6
   int target = 4;
 
   int ans = firstOcc(v, target);
