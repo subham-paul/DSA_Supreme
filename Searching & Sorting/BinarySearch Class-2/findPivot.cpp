@@ -31,7 +31,7 @@ int findPivot(vector<int> arr)
 }
 int main()
 {
-    vector<int> arr{1, 2, 3, 4, 5, 6};
+    vector<int> arr{3, 4, 5, 6, 7, 1, 2};
     int ans = findPivot(arr);
     cout << "Index of Pivot Element is " << ans << endl;
     return 0;
