@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int lastOcc(vector<int> arr, int target) {
@@ -30,6 +31,9 @@ int main() {
 
   int ans = lastOcc(v, target);
   cout << "Last occurence is at " << ans << endl;
+
+  auto ans2 = upper_bound(v.begin(), v.end(), target);
+  cout << "Find ans help of UPPER Bound Function => " << (ans2 - v.begin() - 1)<< endl;
 
   return 0;
 }
