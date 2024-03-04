@@ -23,7 +23,8 @@ int findPivot(vector<int> arr) {
     return -1;
 }
 int main() {
-    vector<int> arr{1, 2, 3, 4, 5, 6};
+    vector<int> arr{3, 4, 5, 6, 1, 2};
+    //              0, 1, 2, 3, 4, 5
     int ans = findPivot(arr);
     cout << "Index of Pivot Element is " << ans << endl;
     return 0;
