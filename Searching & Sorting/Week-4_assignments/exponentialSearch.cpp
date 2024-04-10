@@ -2,19 +2,13 @@
 using namespace std;
 
 int binarySearch(int a[], int start, int end, int x) {
-    while (start <= end)
-    {
+    while (start <= end) {
         int mid = (start + end) / 2;
-        if (a[mid] == x)
-        {
+        if (a[mid] == x) {
             return mid;
-        }
-        else if (x > a[mid])
-        {
+        } else if (x > a[mid]) {
             start = mid + 1;
-        }
-        else
-        {
+        } else {
             end = mid - 1;
         }
     }
