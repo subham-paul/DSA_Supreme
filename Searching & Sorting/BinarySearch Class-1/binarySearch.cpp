@@ -6,19 +6,17 @@ using namespace std;
 int binarySearch(int arr[], int size, int target) {
   int start = 0;
   int end = size - 1;
-  int mid = start + (end - start) / 2;
 
   while (start <= end) {
-    int element = arr[mid];
-    if (element == target) { // element found, then return index
+    int mid = start + (end - start) / 2;
+    if (arr[mid] == target) { // element found, then return index
       return mid;
     }
-    if (target < element) {
+    if (target < arr[mid]) {
       end = mid - 1; // search in left side
     } else {
       start = mid + 1; // search in right side
     }
-    mid = start + (end - start) / 2;
   }
   return -1; // element not found
 }
@@ -39,8 +37,9 @@ int main() {
   vector<int> v{1, 2, 3, 4, 5, 6};
   int arr[] = {1, 2, 3, 4, 5, 6, 7};
   int size = 7;
+  int key = 4;
 
-  if (binary_search(arr, arr + size, 7)) {
+  if (binary_search(arr, arr + size, key)) {
     cout << "Found" << endl;
   } else {
     cout << "Not found. " << endl;
