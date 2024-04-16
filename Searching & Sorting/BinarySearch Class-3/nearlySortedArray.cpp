@@ -20,7 +20,6 @@ int binarySearch(vector<int> arr, int target) {
     } else {
       e = mid - 2; // left search
     }
-    mid = s + (e - s) / 2;
   }
   return -1;
 }
