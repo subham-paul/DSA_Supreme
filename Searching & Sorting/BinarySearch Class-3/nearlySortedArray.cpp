@@ -6,9 +6,8 @@ int binarySearch(vector<int> arr, int target) {
   int s = 0;
   int e = arr.size() - 1;
 
-  int mid = s + (e - s) / 2;
-
   while (s <= e) {
+    int mid = s + (e - s) / 2;
     if (arr[mid] == target)
       return mid;
     if (mid - 1 >= s && arr[mid - 1] == target)
@@ -16,15 +15,11 @@ int binarySearch(vector<int> arr, int target) {
     if (mid + 1 <= e && arr[mid + 1] == target)
       return mid + 1;
 
-    if (target > arr[mid]) 
-    {
-      // right search
-      s = mid + 2;
+    if (target > arr[mid]) {
+      s = mid + 2; // right search
     } else {
-      // left search
-      e = mid - 2;
+      e = mid - 2; // left search
     }
-    mid = s + (e - s) / 2;
   }
   return -1;
 }
