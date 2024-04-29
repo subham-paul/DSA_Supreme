@@ -6,10 +6,10 @@ using namespace std;
 int firstOcc(vector<int> arr, int target) {
   int s = 0;
   int e = arr.size() - 1;
-  int mid = s + (e - s) / 2;
   int ans = -1;
 
   while (s <= e) {
+    int mid = s + (e - s) / 2;
     if (arr[mid] == target) {
       ans = mid; // ans store      
       e = mid - 1; // left search
@@ -18,7 +18,6 @@ int firstOcc(vector<int> arr, int target) {
     } else if (target > arr[mid]) {      
       s = mid + 1; // right search
     }
-    mid = s + (e - s) / 2;
   }
   return ans;
 }
