@@ -1,20 +1,18 @@
 #include <iostream>
 using namespace std;
-int getLength(char brr[])
-{
+
+int getLength(char brr[]) {
     int i = 0, length = 0;
-    while (brr[i] != '\0')
-    {
+    while (brr[i] != '\0') {
         length++;
         i++;
     }
     return length;
 }
-int main()
-{
+int main() {
     char name[100];
-    cout << "enter your name ";
+    cout << "Enter Your First Name Only -> ";
     cin >> name;
-    cout << "Size is : "<< getLength(name) << endl;
+    cout << "Size of the cahr is : " << getLength(name) << endl;
     return 0;
 }
