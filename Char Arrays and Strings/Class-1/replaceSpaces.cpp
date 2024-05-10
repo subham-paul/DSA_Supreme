@@ -3,7 +3,6 @@
 using namespace std;
 
 void replaceSpaces(char sentence[]) {
-    int i = 0;
     int n = strlen(sentence);
 
     for (int i = 0; i < n; i++) {
@@ -15,7 +14,7 @@ void replaceSpaces(char sentence[]) {
 
 int main() {
     char sentence[100];
-    cout << "Enter a Sentence ";
+    cout << "Enter a Sentence -> ";
     cin.getline(sentence, 100);
     replaceSpaces(sentence);
     cout << "Printing sentence with @ char -> " << sentence << endl;
