@@ -1,16 +1,16 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-void convertIntoUpperCase(char arr[]){
+
+void convertIntoUpperCase(char arr[]) {
     int n = strlen(arr);
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         arr[i] = arr[i] - 'a' + 'A';
     }
 }
-int main()
-{
+
+int main() {
     char arr[100] = "subham";
     convertIntoUpperCase(arr);
     cout << arr << endl;
