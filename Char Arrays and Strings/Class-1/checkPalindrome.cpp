@@ -17,7 +17,11 @@ bool checkPalindrome(char word[]) {
     return true;
 }
 int main() {
-    char arr[100] = "leveljj";
-    cout << "plindrome check: " << checkPalindrome(arr) << endl;
+    char ch[100] = "MadaM";
+    if(checkPalindrome(ch) == true) {
+        cout<<"It's Palindrome";
+    } else {
+        cout<<"It's Not Palindrome";
+    }
     return 0;
 }
