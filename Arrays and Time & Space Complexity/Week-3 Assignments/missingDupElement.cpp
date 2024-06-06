@@ -21,7 +21,7 @@ void findMissingDuplicate(int arr[], int size) {
 }
 
 int main() {
-    int arr[] = {1, 2, 2, 5, 4};
+    int arr[] = {5, 4, 4, 4, 1};
     int size = sizeof(arr) / sizeof(int);
     findMissingDuplicate(arr, size);
     return 0;
